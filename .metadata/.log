@@ -208,3 +208,8 @@ Java Model Exception: Error in Java Model (code 969): Lab01 [in src [in OOP]] do
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
 !SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-11-15 22:54:49.541
 !MESSAGE Lab01 [in src [in OOP]] does not exist
+
+!ENTRY org.eclipse.core.resources 2 2 2023-11-15 23:03:10.719
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2023-11-15 23:03:10.719
+!MESSAGE The project description file (.project) for 'OOP' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
