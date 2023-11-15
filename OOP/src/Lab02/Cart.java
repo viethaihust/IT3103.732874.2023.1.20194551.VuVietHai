@@ -28,6 +28,29 @@ public class Cart {
 		System.out.println("DVD is not found in the cart.");
 	}
 		
+	public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList){
+        if(qtyOrdered+dvdList.length <= MAX_NUMBERS_ORDERED){
+            for(int i = 0; i < dvdList.length; i++) {
+            	itemsOrdered[i] = dvdList[i];
+            	qtyOrdered++;
+    		}
+            System.out.println("The disc has been added.");
+        } else {
+            System.out.println("The cart is full. Cannot add more DVDs.");
+        }
+    }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2){
+        if(qtyOrdered+2 <= MAX_NUMBERS_ORDERED){
+            itemsOrdered[qtyOrdered]=dvd1;
+            itemsOrdered[qtyOrdered+1]=dvd2;
+            qtyOrdered=qtyOrdered+2;
+            System.out.println("The disc has been added.");
+        } else {
+            System.out.println("The cart is full. Cannot add more DVDs.");
+        }
+    }
+	
 	public float totalCost() {
 		float total = 0.0f;
 		for(int i = 0; i < qtyOrdered; i++) {
