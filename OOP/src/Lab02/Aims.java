@@ -14,7 +14,7 @@ public class Aims {
 		
 		DigitalVideoDisc [] dvdList = {dvd1, dvd2, dvd3};
 		anOrder.addDigitalVideoDisc(dvdList);
-        anOrder.printCart();
+        anOrder.print();
 		
 	}
 

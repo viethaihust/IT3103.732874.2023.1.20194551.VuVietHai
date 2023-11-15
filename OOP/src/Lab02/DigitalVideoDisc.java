@@ -41,6 +41,13 @@ public class DigitalVideoDisc {
 		this.category = category;
 	}
 	
+	public DigitalVideoDisc(String title, String category, float cost) {
+        this.id = ++nbDigitalVideoDiscs;
+        this.title = title;
+        this.category = category;
+        this.cost = cost;
+    }
+	
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
 		super();
 		this.id = ++nbDigitalVideoDiscs;
@@ -55,4 +62,15 @@ public class DigitalVideoDisc {
         return id;
     }
 	
+    public boolean isMatch(int id) {
+        return this.id == id;
+    }
+
+    public boolean isMatch(String title) {
+        return this.title.equals(title);
+    }
+    
+    public void print() {
+        System.out.println(id + " - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + "$");
+    }
 }
