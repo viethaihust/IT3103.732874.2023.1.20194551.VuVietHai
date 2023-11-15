@@ -1,4 +1,4 @@
-package Lab02;
+package AimsProject.Lab02;
 
 public class CartTest {
     public static void main (String[] args) {

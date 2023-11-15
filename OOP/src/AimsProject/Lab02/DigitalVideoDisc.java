@@ -1,4 +1,4 @@
-package Lab02;
+package AimsProject.Lab02;
 
 public class DigitalVideoDisc {
     private static int nbDigitalVideoDiscs = 0;
