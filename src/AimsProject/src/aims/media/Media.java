@@ -10,6 +10,11 @@ public class Media {
 	public Media() {
 		super();
 	}
+	
+    protected Media(String title) {
+        this();
+        this.title = title;
+    }
 
 	public int getId() {
 		return id;
