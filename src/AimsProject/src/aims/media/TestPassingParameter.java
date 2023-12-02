@@ -1,4 +1,4 @@
-package AimsProject;
+package AimsProject.src.aims.media;
 
 public class TestPassingParameter {
     public static void main(String[] args) {

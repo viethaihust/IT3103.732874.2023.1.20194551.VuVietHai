@@ -1,4 +1,4 @@
-package AimsProject;
+package AimsProject.src.aims.media;
 
 public class Disc extends Media {
 	protected int length;

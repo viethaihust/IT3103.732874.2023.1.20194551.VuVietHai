@@ -1,6 +1,6 @@
-package AimsProject;
+package AimsProject.src.aims.media;
 
-public class Track {
+public class Track implements Playable {
     private String title;
     private int length;
 
@@ -17,5 +17,9 @@ public class Track {
     public int getLength() {
         return length;
     }
-
+    
+    public void play() {
+        System.out.println("Playing Track: " + this.getTitle());
+        System.out.println("Track length: " + this.getLength());
+    }
 }

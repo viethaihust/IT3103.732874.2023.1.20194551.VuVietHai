@@ -1,4 +1,4 @@
-package AimsProject;
+package AimsProject.src.aims.media;
 
 public class Media {
 	
@@ -42,5 +42,11 @@ public class Media {
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
+	
+	@Override
+    public boolean equals(Object o) {
+        Media media = (Media) o;
+        return media.getTitle().equals(this.getTitle());
+    }
 	
 }

@@ -1,4 +1,6 @@
-package AimsProject;
+package AimsProject.src.aims;
+
+import AimsProject.src.aims.media.DigitalVideoDisc;
 
 public class Aims {
 

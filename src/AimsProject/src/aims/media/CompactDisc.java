@@ -1,9 +1,16 @@
-package AimsProject;
+package AimsProject.src.aims.media;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompactDisc extends Disc {
+public class CompactDisc extends Disc implements Playable {
+    public void play() {
+        System.out.println("There are " + tracks.size() + " tracks in this CD");
+        for(Track track : tracks) {
+            track.play();
+        }
+    }
+    
 	private String artist;
     private List<Track> tracks = new ArrayList<>();
 
@@ -47,4 +54,5 @@ public class CompactDisc extends Disc {
         }
         return totalLength;
     }
+
 }

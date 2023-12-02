@@ -1,7 +1,12 @@
-package AimsProject;
+package AimsProject.src.aims.media;
 
-public class DigitalVideoDisc extends Disc {
+public class DigitalVideoDisc extends Disc implements Playable {
 	
+    public void play() {
+        System.out.println("Playing DVD: " + this.getTitle());
+        System.out.println("DVD length: " + this.getLength());
+    }
+    
 	public DigitalVideoDisc(String title) {
 		this.title = title;
 	}
@@ -36,4 +41,5 @@ public class DigitalVideoDisc extends Disc {
     public void print() {
         System.out.println(id + " - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + "$");
     }
+    
 }
