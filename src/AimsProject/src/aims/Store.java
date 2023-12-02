@@ -24,4 +24,21 @@ public class Store {
             System.out.println("The media is not in the store");
         }
     }
+    
+    public void printStore(){
+        System.out.println("*******************************Store*******************************");
+        for(Media media:itemsInStore){
+            System.out.println(media.toString());
+        }
+        System.out.println("*******************************************************************");
+    }
+    
+    public Media searchStore(String title){
+        for(Media media: itemsInStore){
+        	if(media.getTitle() != null) {
+        		if(media.getTitle().equals(title)) return media;
+        	}
+        }
+        return null;
+    }
 }

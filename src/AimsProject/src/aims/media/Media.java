@@ -1,5 +1,7 @@
 package AimsProject.src.aims.media;
 
+import java.util.Comparator;
+
 public class Media {
 	
 	protected int id;
@@ -15,7 +17,14 @@ public class Media {
         this();
         this.title = title;
     }
-
+    
+    protected Media(String title, String category, float cost) {
+        this();
+        this.title = title;
+        this.category = category;
+        this.cost = cost;
+    }
+    
 	public int getId() {
 		return id;
 	}
@@ -53,5 +62,8 @@ public class Media {
         Media media = (Media) o;
         return media.getTitle().equals(this.getTitle());
     }
+	
+	public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
+    public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
 	
 }

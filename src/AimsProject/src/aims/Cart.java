@@ -1,6 +1,7 @@
 package AimsProject.src.aims;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import AimsProject.src.aims.media.Media;
 
@@ -48,6 +49,17 @@ public class Cart {
         }
         System.out.println("Total cost: " + totalCost());
         System.out.println("***************************************************");
+    }
+    
+    public List<Media> getItemOrdered() {
+        return itemsOrdered;
+    }
+    
+    public Media Search(String title){
+        for(Media media: itemsOrdered){
+            if(media.getTitle().equals(title)) return media;
+        }
+        return null;
     }
 
 }
