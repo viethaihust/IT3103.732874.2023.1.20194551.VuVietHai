@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import AimsProject.src.aims.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart {
     public static final int MAX_NUMBER_ORDERED = 20;
 
-    private ArrayList<Media> itemsOrdered = new ArrayList<>();
+    private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 
     public void addMedia(Media media) {
         if (itemsOrdered.size() < MAX_NUMBER_ORDERED) {
@@ -51,7 +53,7 @@ public class Cart {
         System.out.println("***************************************************");
     }
     
-    public List<Media> getItemOrdered() {
+    public ObservableList<Media> getItemOrdered() {
         return itemsOrdered;
     }
     

@@ -65,5 +65,22 @@ public class Media {
 	
 	public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
     public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
+    
+    public boolean filterProperty(String filter, String type) {
+        if (filter == null || filter.isEmpty()) {
+            return true;
+        } else {
+            if (type == "title") {
+                if (this.getTitle().toLowerCase().indexOf(filter.toLowerCase()) != -1) {
+                    return true;
+                }
+            } else if (type == "id") {
+                if(Integer.toString(this.getId()).toLowerCase().indexOf(filter.toLowerCase()) != -1) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 	
 }
